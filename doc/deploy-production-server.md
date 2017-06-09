@@ -253,4 +253,9 @@ For security reason, you must setup SSL Certificate for production environment, 
 
     # Add this rake task to your crontab so it runs regularly
     RAILS_ENV=production rake solvency:liability_proof
+    
+ **Run Peatio**
+
+        # start server
+        bundle exec rails server
 
