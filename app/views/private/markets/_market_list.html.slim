@@ -2,9 +2,9 @@
   - if @market_groups.size > 1
     .dropdown-wrapper
       ul.dropdown-menu
-        li: a.active data-name='all' href="javascript:;" = t('.all_html')
+        li: a.active data-name='all' href="javascript:void(0);" = t('.all_html')
         - @market_groups.each do |name|
-          li: a data-name=name href="javascript:;" = t(".#{name}_html")
+          li: a data-name=name href="javascript:void(0);" = t(".#{name}_html")
   #market_list
     .panel.panel-default
       .panel-body.panel-body-head
