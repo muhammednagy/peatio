@@ -57,10 +57,17 @@ header {
   p + p { margin-left: 20px !important; }
   span + span { margin-left: 10px !important; }
 
+  .navbar-brand 
+  {
+    font-family: $font-family-monospace;
+    font-weight: bold;
+  }
+
   span[data-title]:before { content: attr(data-title) ": "; }
 
-  span.vol, span.high, span.low {
+  span.vol, span.high, span.low, span.change {
     font-family: $font-family-monospace;
+    font-weight: bold;
   }
 
   .bootstrap-switch {
@@ -129,7 +136,6 @@ header {
     border-bottom-right-radius: 5px;
     background-color: $panel-bg;
     border: 1px solid $panel-default-border;
-    box-shadow: 0px 0px 8px $panel-default-border;
 
     li:first-child {
       padding-top: 8px;
@@ -170,6 +176,7 @@ header {
 
   #account_summary {
     font-family: $font-family-monospace;
+    font-weight: bold;
     .dropdown-menu {
       @include header-dropdown;
     }
@@ -226,6 +233,7 @@ header {
   font-size: 14px !important;
   background-color: #000;
   font-family: $font-family-monospace;
+  font-weight: bold;
 }
 
 #candlestick > .mask {
@@ -327,7 +335,7 @@ header {
         -moz-box-shadow: none;
         -webkit-box-shadow: none;
       }
-
+      
       .btn-group {
         margin-right: 5px;
         cursor: pointer;
@@ -474,13 +482,14 @@ header {
   .ask, .last, .bid {
     text-align: center;
     font-family: $font-family-monospace;
+    font-weight: bold;
     .hint { cursor: default; color: #777; }
   }
 
   .last {
     padding-top: 5px;
-    font-size: 34px;
-    line-height: 34px;
+    font-size: 26px;
+    line-height: 29px;
   }
 }
 
@@ -694,14 +703,19 @@ header {
 #ask_entry, #bid_entry {
   z-index: 999;
 
-  .panel-body { padding-top: 10px; }
+  .panel-body { padding-top: 10px;}
+
+  .btn{
+    font-family: $font-family-monospace; 
+    font-weight: bold;
+  }
 
   .btn:focus, .btn:active:focus, .btn.active:focus {
     outline: 0px auto -webkit-focus-ring-color;
     outline-offset: -2px;
   }
 
-  .row { margin-bottom: 6px; }
+  .row { margin-bottom: 6px;}
 
   .input-group {
     .input-group-addon {
@@ -709,14 +723,14 @@ header {
     }
 
     label.input-group-addon {
-      padding: 3px 6px 0px 6px;
+      padding: 0px 6px 0px 6px;
       min-width: 70px;
       text-align: right;
       color: #aaa;
     }
 
     span.input-group-addon {
-      padding: 3px 6px 0px 6px;
+      padding: 0px 6px 0px 6px;
       min-width: 40px;
       text-align: left;
       color: #aaa;
@@ -724,7 +738,7 @@ header {
 
     input {
       text-align: right;
-      padding-top: 8px !important;
+      padding-top: 4px !important;
       padding-bottom: 4px !important;
       padding-right: 6px !important;
       padding-left: 24px !important;
@@ -734,7 +748,7 @@ header {
   }
 
   .hint-price-disadvantage, .hint-positions  {
-    top: 3px;
+    top: 0px;
     left: 60px;
     margin-left: 0px;
     position: absolute;
@@ -743,11 +757,11 @@ header {
 
   .label { font-size: inherit; }
   .label.label-info { color: $brand-info }
-  .label.label-success { color: $brand-success }
-  .label.label-danger { color: $brand-danger }
+  .label.label-success { color: $up-text }
+  .label.label-danger { color: $down-text }
 
   span.status-info, .status-success, .status-danger {
-    top: -3px;
+    top: -2px;
     left: -6px;
     margin-left: 0px;
     position: absolute;
@@ -758,9 +772,12 @@ header {
     margin-top: 18px;
     margin-bottom: 13px;
 
-    .current-balance { font-family: $font-family-monospace; }
+    .current-balance { font-family: $font-family-monospace; 
+      font-weight: bold;
+    }
     .unit { padding-left: 3px; }
   }
+  
 }
 
 /* order-book trades my-orders table
@@ -832,6 +849,7 @@ table {
     font-family: $font-family-monospace;
     text-align: right;
     margin-right: 15px;
+    font-weight: bold;
   }
 }
 

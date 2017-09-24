@@ -6,14 +6,16 @@
       &.time, &.at, &.kind, &.operation {
         text-align: left;
         font-size: 14px;
-        font-family: monospace;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        font-weight: bold;
       }
 
       &.operation { text-align: right; }
 
       &.price, &.amount, &.volume {
         text-align: right;
-        font-family: monospace;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        font-weight: bold;
       }
     }
 

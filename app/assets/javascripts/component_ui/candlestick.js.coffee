@@ -37,10 +37,10 @@ RANGE_DEFAULT =
 
 COLOR_ON =
   candlestick:
-    color: '#990f0f'
-    upColor: '#000000'
-    lineColor: '#cc1414'
-    upLineColor: '#49c043'
+    color: '#EE395B'
+    upColor: '#32d296'
+    lineColor: '#D52042'
+    upLineColor: '#19B97D'
   close:
     color: null
 
@@ -188,14 +188,14 @@ INDICATOR = {MA: false, EMA: false}
         candlestick:
           turboThreshold: 0
           followPointer: true
-          color: '#990f0f'
-          upColor: '#000000'
-          lineColor: '#cc1414'
-          upLineColor: '#49c043'
+          color: '#EE395B'
+          upColor: '#32d296'
+          lineColor: '#D52042'
+          upLineColor: '#19B97D'
           dataGrouping: dataGrouping
         column:
-          turboThreshold: 0
-          dataGrouping: dataGrouping
+          turboThreshold: 0   
+          dataGrouping: dataGrouping  
         trendline:
           lineWidth: 1
         histogram:
@@ -302,7 +302,7 @@ INDICATOR = {MA: false, EMA: false}
           type: 'trendline',
           algorithm: 'MA',
           periods: 5
-          color: '#7c9aaa'
+          color: '#1e87f0'
           visible: INDICATOR['MA']
           marker:
             radius: 0
@@ -315,7 +315,7 @@ INDICATOR = {MA: false, EMA: false}
           type: 'trendline',
           algorithm: 'MA',
           periods: 10
-          color: '#be8f53'
+          color: '#faa05a'
           visible: INDICATOR['MA']
           marker:
             radius: 0
@@ -328,7 +328,7 @@ INDICATOR = {MA: false, EMA: false}
           type: 'trendline',
           algorithm: 'EMA',
           periods: 7
-          color: '#7c9aaa'
+          color: '#1e87f0'
           visible: INDICATOR['EMA']
           marker:
             radius: 0
@@ -341,7 +341,7 @@ INDICATOR = {MA: false, EMA: false}
           type: 'trendline',
           algorithm: 'EMA',
           periods: 30
-          color: '#be8f53'
+          color: '#faa05a'
           visible: INDICATOR['EMA']
           marker:
             radius: 0
@@ -354,7 +354,7 @@ INDICATOR = {MA: false, EMA: false}
           showInLegend: true,
           type: 'trendline',
           algorithm: 'MACD'
-          color: '#7c9aaa'
+          color: '#1e87f0'
           marker:
             radius: 0
         }
@@ -366,7 +366,7 @@ INDICATOR = {MA: false, EMA: false}
           showInLegend: true,
           type: 'trendline',
           algorithm: 'signalLine'
-          color: '#be8f53'
+          color: '#faa05a'
           marker:
             radius: 0
         }
@@ -377,7 +377,7 @@ INDICATOR = {MA: false, EMA: false}
           yAxis: 2,
           showInLegend: true,
           type: 'histogram'
-          color: '#990f0f'
+          color: '#EE395B'
         }
       ]
 

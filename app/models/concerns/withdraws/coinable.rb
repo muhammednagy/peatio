@@ -17,10 +17,6 @@ module Withdraws
         Rails.logger.info "#{self.class.name}##{id} uses invalid address: #{fund_uid.inspect}"
         reject
         save!
-      elsif (result[:ismine] == true) || PaymentAddress.find_by_address(fund_uid)
-        Rails.logger.info "#{self.class.name}##{id} uses hot wallet address: #{fund_uid.inspect}"
-        reject
-        save!
       else
         super
       end

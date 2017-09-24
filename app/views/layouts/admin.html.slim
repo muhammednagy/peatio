@@ -26,7 +26,7 @@ html lang="en"
 
           - if can? :menu, Deposit
             li.dropdown class = check_active('deposits')
-              = link_to 'javascript:;', class: 'dropdown-toggle', 'data-toggle' => 'dropdown' do
+              = link_to 'javascript:void(0);', class: 'dropdown-toggle', 'data-toggle' => 'dropdown' do
                 span = t('admin_header.deposits')
                 span.caret
               ul.dropdown-menu
@@ -36,7 +36,7 @@ html lang="en"
 
           - if can? :menu, Withdraw
             li.dropdown class = check_active('withdraws')
-              = link_to 'javascript:;', class: 'dropdown-toggle', 'data-toggle' => 'dropdown' do
+              = link_to 'javascript:void(0);', class: 'dropdown-toggle', 'data-toggle' => 'dropdown' do
                 span = t('admin_header.withdraws')
                 span.caret
               ul.dropdown-menu
@@ -53,7 +53,7 @@ html lang="en"
               = link_to t(".menus.items.operating.tickets"), admin_tickets_path
 
           li.dropdown class = check_active('statistic')
-            = link_to 'javascript:;', class: 'dropdown-toggle', 'data-toggle' => 'dropdown' do
+            = link_to 'javascript:void(0);', class: 'dropdown-toggle', 'data-toggle' => 'dropdown' do
               span = t('admin_header.statistics')
               span.caret
             ul.dropdown-menu
