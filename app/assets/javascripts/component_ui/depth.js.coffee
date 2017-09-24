@@ -62,8 +62,8 @@
       series : [{
         name : gon.i18n.bid
         type : 'area'
-        fillColor: 'rgba(77, 215, 16, 0.5)'
-        lineColor: 'rgb(77, 215, 16)'
+        fillColor: '#009f63'
+        lineColor: '#32d296'
         color: 'transparent'
         animation:
           duration: 1000
@@ -72,8 +72,8 @@
         type: 'area'
         animation:
           duration: 1000
-        fillColor: 'rgba(208, 0, 23, 0.3)'
-        lineColor: 'rgb(208, 0, 23)'
+        fillColor: '#BB062B'
+        lineColor: '#EE395B'
         color: 'transparent'
       }]
 

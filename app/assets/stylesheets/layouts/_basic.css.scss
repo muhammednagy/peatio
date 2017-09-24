@@ -19,7 +19,10 @@ table.table { td.vertical-center { vertical-align: middle !important; } }
 
 /* TODO UNKNDOW CLASS
 ------------------------------------------------------ */
-.number { font-family: monospace; }
+.number { 
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; 
+    font-weight: bold;
+}
 .number-label { color: $gray-light; margin-right: 5px; }
 span.hint { margin-top: 6px; }
 .text-ignore { color: $gray-light; }

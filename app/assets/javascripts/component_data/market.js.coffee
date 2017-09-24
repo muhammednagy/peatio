@@ -40,7 +40,7 @@
 
       @points.close.push [x, p]
       @points.candlestick.push [x, p, p, p, p]
-      @points.volume.push {x: x, y: v, color: if p >= @points.close[i][1] then 'rgba(0, 255, 0, 0.5)' else 'rgba(255, 0, 0, 0.5)'}
+      @points.volume.push {x: x, y: v, color: if p >= @points.close[i][1] then 'rgba(50, 210, 150, 1)' else 'rgba(238, 57, 91, 1)'}
       i += 1
     i
 
@@ -57,7 +57,7 @@
     @points.candlestick[i][4] = p
 
     @points.volume[i].y += v
-    @points.volume[i].color = if i > 0 && @points.close[i][1] >= @points.close[i-1][1] then 'rgba(0, 255, 0, 0.5)' else 'rgba(255, 0, 0, 0.5)'
+    @points.volume[i].color = if i > 0 && @points.close[i][1] >= @points.close[i-1][1] then 'rgba(50, 210, 150, 1)' else 'rgba(238, 57, 91, 1)'
 
   @refreshUpdatedAt = ->
     @updated_at = Math.round(new Date().valueOf()/1000)
@@ -84,7 +84,7 @@
 
       close_price.push [time, close]
       candlestick.push [time, open, high, low, close]
-      volume.push {x: time, y: vol, color: if trend then 'rgba(0, 255, 0, 0.5)' else 'rgba(255, 0, 0, 0.5)'}
+      volume.push {x: time, y: vol, color: if trend then 'rgba(50, 210, 150, 1)' else 'rgba(238, 57, 91, 1)'}
 
     # remove last point from result, because we'll re-calculate it later
     minutes: @minutes, candlestick: candlestick.slice(0, -1), volume: volume.slice(0, -1), close: close_price.slice(0, -1)

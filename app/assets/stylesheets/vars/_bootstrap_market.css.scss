@@ -14,10 +14,10 @@ $body-bg: #000;
 $text-color: #ccc;
 $link-color: #ddd;
 
-$up-text: rgb(77, 215, 16);
-$down-text: rgb(208, 0, 23);
-$up-text-fade: rgba(77, 215, 16, 0.9);
-$down-text-fade: rgba(208, 0, 23, 0.9);
+$up-text: rgb(83,185,135);
+$down-text: rgb(235,77,92);
+$up-text-fade: rgba(83,185,135, 0.9);
+$down-text-fade: rgba(235,77,92, 0.9);
 
 $panel-bg: rgb(21,21,21);
 $panel-bg-alpha: rgba(28,28,28,0.8);
@@ -28,7 +28,7 @@ $panel-body-padding: 8px 8px 8px 8px;
 $panel-heading-padding: 2px 8px 0px 8px;
 $panel-default-text: $text-color;
 
-$font-family-monospace: Menlo, Monaco, Consolas, "Courier New", monospace;
+$font-family-monospace: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 
 $navbar-default-bg: $panel-bg;
 $navbar-default-border: rgba(179, 175, 156, 0.28);

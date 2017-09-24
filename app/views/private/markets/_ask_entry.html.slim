@@ -4,12 +4,10 @@
       = f.hidden_field :ord_type
       .input-group.price
         label.input-group-addon = t('.price')
-        span.label.label-danger.hint-price-disadvantage
         = f.text_field :price, class: 'form-control'
         span.input-group-addon = t(market.bid['currency'], scope: 'market.currency')
       .input-group.amount
         label.input-group-addon = t('.amount')
-        span.label.label-info.hint-positions
         = f.text_field :origin_volume, class: 'form-control'
         span.input-group-addon = t(market.ask['currency'], scope: 'market.currency')
       .input-group.total
