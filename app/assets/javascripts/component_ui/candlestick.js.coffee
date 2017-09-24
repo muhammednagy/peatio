@@ -38,7 +38,7 @@ RANGE_DEFAULT =
 COLOR_ON =
   candlestick:
     color: '#990f0f'
-    upColor: '#000000'
+    upColor: '#1AA400'
     lineColor: '#cc1414'
     upLineColor: '#49c043'
   close:
