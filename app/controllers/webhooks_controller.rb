@@ -4,8 +4,10 @@ class WebhooksController < ApplicationController
 	def tx
 		if params[:type] == "transaction" && params[:hash].present?
       transactions = exec "bitcoin-cli -rpcport=19332 listtransactions"
+      puts transactions
       # txid = accounts.map{ |p| p[:txid] if p[:txid] == params[:hash] }.compact.join
       current_transaction = transactions.select{ |tr| tr[:txid] == params[:hash] }[0]
+      puts current_transaction
       account = PaymentAddress.find_by_address(current_transaction[:address]).account
       current_balance = account.balance
       account.update(balance: current_balance + current_transaction[:amount])
