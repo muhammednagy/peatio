@@ -3,9 +3,13 @@ class WebhooksController < ApplicationController
 	skip_before_filter :verify_authenticity_token
 	def tx
 		if params[:type] == "transaction" && params[:hash].present?
-      account = Account.find_by_member_id_and_currency(1, 2)
+      transactions = exec "bitcoin-cli -rpcport=19332 listtransactions"
+      # txid = accounts.map{ |p| p[:txid] if p[:txid] == params[:hash] }.compact.join
+      current_transaction = transactions.select{ |tr| tr[:txid] == params[:hash] }[0]
+      account = PaymentAddress.find_by_address(current_transaction[:address]).account
       current_balance = account.balance
-      account.update(balance: current_balance + 0.001.to_d)
+      account.update(balance: current_balance + current_transaction[:amount])
+      puts current_balance
 			AMQPQueue.enqueue(:deposit_coin, txid: params[:hash], channel_key: "satoshi")
 			render :json => { :status => "queued" }
 		end
