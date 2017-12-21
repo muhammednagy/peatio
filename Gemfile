@@ -3,7 +3,8 @@ source 'https://rubygems.org'
 gem 'rails', '~> 4.0.12'
 gem 'rails-i18n'
 
-gem 'mysql2', '~> 0.3.21'
+# gem 'mysql2', '~> 0.3.21'
+gem 'pg'
 gem 'daemons-rails'
 gem 'redis-rails'
 
@@ -77,7 +78,7 @@ group :development, :test do
   gem 'meta_request'
   gem 'better_errors'
   gem 'binding_of_caller'
-  gem 'pry-rails'
+  # gem 'pry-rails'
   gem 'quiet_assets'
   gem 'mails_viewer'
   gem 'timecop'
