@@ -313,6 +313,7 @@ GEM
     rest-client (1.6.8)
       mime-types (~> 1.16)
       rdoc (>= 2.4.2)
+    rolify (5.1.0)
     rotp (1.6.1)
     rspec-core (2.14.7)
     rspec-expectations (2.14.5)
@@ -470,6 +471,7 @@ DEPENDENCIES
   rbtree
   redis-rails
   rest-client (~> 1.6.8)
+  rolify
   rotp
   rspec-rails
   sass-rails

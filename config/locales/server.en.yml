@@ -293,7 +293,7 @@ en:
     currency:
       btc: BTC
       eth: ETH
-      cny: CNY
+      myr: myr
       doge: DOGE
       pts: PTS
       ltc: LTC
@@ -314,8 +314,8 @@ en:
       name: BitsharesX
       format: '0,0.0000'
     renminbi:
-      key: CNY
-      code: CNY
+      key: myr
+      code: myr
       name: Chinese Yuan
       format: '0,0.00'
     dogecoin:
@@ -682,14 +682,14 @@ en:
       index:
         liability-proof: Proof of Liabilities
         btc-assets: BTC Assets
-        cny-assets: CNY Assets
+        myr-assets: myr Assets
         eth-assets: ETH Assets
       liability_tabs:
         verify-btc: Verify My BTC Assets
-        verify-cny: Verify My CNY Assets
+        verify-myr: Verify My myr Assets
         verify-eth: Verify My ETH Assets
         btc-assets-total: 'Total BTC assets of exchange: '
-        cny-assets-total: 'Total CNY assets of exchange: '
+        myr-assets-total: 'Total myr assets of exchange: '
         eth-assets-total: 'Total ETH assets of exchange: '
       liability_proof:
         title: Proof of Liabilities
@@ -717,10 +717,10 @@ en:
         intro: All of exchange's ETH assets are listed here.
         total: Total ETH Assets
         address: Address
-      cny_assets:
-        title: CNY Assets
-        intro: All of exchange's CNY assets are listed here.
-        total: Total CNY Assets
+      myr_assets:
+        title: myr Assets
+        intro: All of exchange's myr assets are listed here.
+        total: Total myr Assets
         description: " <p>For supervision, you can inquiry the balance of our deposit
           account:</p> <p>Bank: %{bank}</p> <p>Account： %{address}</p> <p>Inquiry
           Password： %{password}</p> <p>Inquiry Tel.： %{tel}</p>"
@@ -729,11 +729,11 @@ en:
     funds:
       show:
         account_history: Account History
-        cny_format: '0.00'
+        myr_format: '0.00'
         btc_format: '0.00000000'
         eth_format: '0.00000000'
         reason:
-          cny:
+          myr:
             strike_add: Plus
             strike_sub: Sub
             deposit: Deposit
@@ -792,7 +792,7 @@ en:
       market_list:
         all: All Markets
         all_html: "<i class='fa fa-check'></i><span>All Markets</span>"
-        cny_html: "<i class='fa fa-check'></i><span>CNY Markets</span>"
+        myr_html: "<i class='fa fa-check'></i><span>myr Markets</span>"
         btc_html: "<i class='fa fa-check'></i><span>BTC Markets</span>"
         price: Price
         change: "24h %"
@@ -983,7 +983,7 @@ en:
         balance: Balance
         available: Available
         title: "%{icon} %{c} Account"
-        cny_format: '0.00'
+        myr_format: '0.00'
         btc_format: '0.00000000'
         eth_format: '0.00000000'
         total: Total
@@ -1377,7 +1377,7 @@ en:
       wait: Wait
       cancel: Cancel
     currency:
-      cny: CNY
+      myr: myr
       btc: BTC
       eth: ETH
     order:

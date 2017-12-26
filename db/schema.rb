@@ -11,7 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150405053726) do
+ActiveRecord::Schema.define(version: 20171226024835) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "account_versions", force: true do |t|
     t.integer  "member_id"
@@ -211,6 +214,13 @@ ActiveRecord::Schema.define(version: 20150405053726) do
     t.string   "nickname"
   end
 
+  create_table "members_roles", id: false, force: true do |t|
+    t.integer "member_id"
+    t.integer "role_id"
+  end
+
+  add_index "members_roles", ["member_id", "role_id"], name: "index_members_roles_on_member_id_and_role_id", using: :btree
+
   create_table "oauth_access_grants", force: true do |t|
     t.integer  "resource_owner_id", null: false
     t.integer  "application_id",    null: false
@@ -334,6 +344,17 @@ ActiveRecord::Schema.define(version: 20150405053726) do
 
   add_index "read_marks", ["member_id"], name: "index_read_marks_on_member_id", using: :btree
   add_index "read_marks", ["readable_type", "readable_id"], name: "index_read_marks_on_readable_type_and_readable_id", using: :btree
+
+  create_table "roles", force: true do |t|
+    t.string   "name"
+    t.integer  "resource_id"
+    t.string   "resource_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "roles", ["name", "resource_type", "resource_id"], name: "index_roles_on_name_and_resource_type_and_resource_id", using: :btree
+  add_index "roles", ["name"], name: "index_roles_on_name", using: :btree
 
   create_table "running_accounts", force: true do |t|
     t.integer  "category"
