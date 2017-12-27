@@ -1248,7 +1248,7 @@ cs:
       trade: Odeslat a stornovat objednávky
     authorizations:
       new:
-        title: Peatio Applikace Autorizace
+        title: 41 Exchange Applikace Autorizace
         authorize_html: Autorizovat <strong class='text-info'>%{name}</strong> pro Váš účet?
         scopes: 'Tato aplikace je zde:'
         authorize: Autorizovat
@@ -1369,41 +1369,41 @@ cs:
       truncate: "..."
   mailer:
     dear_user: Vážený uživateli,
-    signature: Děkujeme,<br/>Peatio Team
+    signature: Děkujeme,<br/>41 Exchange Team
     please_contact: Pokud to nejste vy, prosím <a href='mailto:%{contact_mail}'>kontaktujte nás</a> NEPRODLENĚ.
     footer: Toto je automaticky generovaný email, prosím neodpovídejte, pokud máte nějaký dotaz, prosím <a href="mailto:%{contact_mail}">kontaktujte nás</a>.
   comment_mailer:
     admin_notification:
-      subject: "[PEATIO] Uživatel odpověděl na tiket"
+      subject: "[41 Exchange] Uživatel odpověděl na tiket"
       notification_content: Uživatel %{email} odpověděl na tiket, prosím zobrazte link níže pro další detaily.
     user_notification:
-      subject: "[PEATIO] Váš tiket má novou odpověď"
+      subject: "[41 Exchange] Váš tiket má novou odpověď"
       notification_content: 'Váš tiket má novou odpověď, prosím zobrazte link níže pro další detaily:'
   deposit_mailer:
     deposit_accepted:
-      subject: "[Peatio] Váš vklad byl vložen na Váš účet"
+      subject: "[41 Exchange] Váš vklad byl vložen na Váš účet"
       content: Váš %{currency} vklad byl vložen na Váš účet.
   member_mailer:
     notify_signin:
-      subject: "[PEATIO] Byl jste přihlášen"
+      subject: "[41 Exchange] Byl jste přihlášen"
       just_signed_in: Byl jste přihlášen.
     google_auth_activated:
-      subject: "[PEATIO] Google Authentifikátor aktivován"
+      subject: "[41 Exchange] Google Authentifikátor aktivován"
       google_auth_activated: Aktivoval jste úspěšně Google Autentifikátor.
     google_auth_deactivated:
-      subject: "[PEATIO] Google Authentifikátor deaktivován"
+      subject: "[41 Exchange] Google Authentifikátor deaktivován"
       google_auth_deactivated: Deaktivoval jste úspěšně Google Autentifikátor.
     sms_auth_activated:
-      subject: "[PEATIO] SMS autentifikace aktivována"
+      subject: "[41 Exchange] SMS autentifikace aktivována"
       sms_auth_activated: Aktivoval jste úspěšně SMS Autentifikátor.
     sms_auth_deactivated:
-      subject: "[PEATIO] SMS autentifikace deaktivována"
+      subject: "[41 Exchange] SMS autentifikace deaktivována"
       sms_auth_deactivated: Deaktivoval jste úspěšně SMS Autentifikátor.
     reset_password_done:
-      subject: "[PEATIO] Vaše heslo bylo změněno"
+      subject: "[41 Exchange] Vaše heslo bylo změněno"
       successful: Vaše heslo bylo úspěšně změněno.
     phone_number_verified:
-      subject: "[PEATIO] Vaše telefonní číslo ověřeno."
+      subject: "[41 Exchange] Vaše telefonní číslo ověřeno."
       verified: 'Vaše ověřené telefonní číslo: %{phone_number}'
   system_mailer:
     daily_stats:
@@ -1416,33 +1416,33 @@ cs:
       trades_change_total: Obchody změněny Celkem
   ticket_mailer:
     admin_notification:
-      subject: "[PEATIO] Uživatel vytvořil nový tiket"
+      subject: "[41 Exchange] Uživatel vytvořil nový tiket"
       admin_notification_content: Uživatel %{email} vytvořil nový tiket, prosím zobrazte link níže pro další dataily
     author_notification:
-      subject: "[PEATIO] Děkujeme Vám za odeslání tiketu"
+      subject: "[41 Exchange] Děkujeme Vám za odeslání tiketu"
       thanks_for_submit_ticket: Děkujeme Vám za odeslání tiketu, budeme Vás kontaktovat co nejdříve.
   token_mailer:
     activation:
-      subject: "[Peatio] Aktivace účtu"
+      subject: "[41 Exchange] Aktivace účtu"
       click_to_verify: 'Děkujeme za registraci, prosím zobrazte link níže a ověřte tak Vaši emailovou adresu:'
       unable_to_click: Zkopírujte link a otevřete ve vašem prohlížeči, pokud máte deaktivovánu možnost kliknutí na link a zobrazení.
       link_expire: Link vyprší za 30 minut.
     reset_password:
-      subject: "[Peatio] Prosím resetujte Své heslo"
+      subject: "[41 Exchange] Prosím resetujte Své heslo"
       hi: Ahoj,
       follow_the_link: 'Prosím použijte tento link pro resetování hesla během následujících 30 minut:'
   withdraw_mailer:
     withdraw_submitted:
-      subject: "[Peatio] Stav vašeho výběru byl aktualizován"
+      subject: "[41 Exchange] Stav vašeho výběru byl aktualizován"
       content: Žádost o %{currency} výběr byla úspěšně odeslána, Bude zpracována co nejdříve. Prosím, buďte trpěliví. Napište nám, pokud máte nějaké dotazy.
     withdraw_processing:
-      subject: "[Peatio] Stav vašeho výběru byl aktualizován"
+      subject: "[41 Exchange] Stav vašeho výběru byl aktualizován"
       content: Žádost o Váš %{currency} výběr je zpracovávána. Prosím, buďte trpěliví. Napište nám, pokud máte nějaké dotazy.
     withdraw_done:
-      subject: "[Peatio] Stav vašeho výběru byl aktualizován"
+      subject: "[41 Exchange] Stav vašeho výběru byl aktualizován"
       content: Žádost o Váš %{currency} výběr je dokončena. Prosím, zkontrolujte doručení. Napište nám, pokud máte nějaké dotazy.
     withdraw_state:
-      subject: "[Peatio] Stav vašeho výběru byl aktualizován"
+      subject: "[41 Exchange] Stav vašeho výběru byl aktualizován"
       your_state: 'Stav Vašeho výběru:'
   view_on_github: Zobrazit na Github
   slogan: An open-source crypto-currency exchange for world.
@@ -1459,9 +1459,9 @@ cs:
   gon:
     ask: Poptávka
     bid: Nabídka
-    brand: Peatio Exchange
+    brand: 41 Exchange
     notification:
-      title: Peatio Exchange
+      title: 41 Exchange
       enabled: Notifikace aktivní
       new_trade: "%{kind} objednávka#%{id} zpracována %{price} %{quote_unit} objem %{volume} %{base_unit}。"
   back: Zpět
@@ -1666,9 +1666,9 @@ cs:
     application:
       close: Zavřít
     meta:
-      page_title: Peatio - The Opensource Cryptocurrency Exchange
-      page_description: Peatio - The Opensource Cryptocurrency Exchange
-      page_keywords: Peatio,Opensource,Exchange,Cryptocurrency
+      page_title: 41 Exchange - The Opensource Cryptocurrency Exchange
+      page_description: 41 Exchange - The Opensource Cryptocurrency Exchange
+      page_keywords: 41 Exchange,Opensource,Exchange,Cryptocurrency
   members:
     edit:
       name: Vyplňte prosím aplikaci.

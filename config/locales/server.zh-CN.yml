@@ -1241,10 +1241,10 @@ zh-CN:
     scopes:
       profile: 读取您的基本账户信息(如姓名, 邮件地址)和账户余额
       history: 读取您的挂单和成交记录
-      trade: 代表您在Peatio上进行交易
+      trade: 代表您在41 Exchange上进行交易
     authorizations:
       new:
-        title: Peatio 第三方应用授权
+        title: 41 Exchange 第三方应用授权
         authorize_html: 确定要授权 <strong class='text-info'>%{name}</strong> 使用您的账户吗？
         scopes: '该应用将获得如下权限：'
         authorize: 同意
@@ -1370,10 +1370,10 @@ zh-CN:
     footer: 此邮件由系统自动发出，请勿直接回复。 有问题请<a href="mailto:%{contact_mail}">联系我们</a>。
   comment_mailer:
     admin_notification:
-      subject: "[PEATIO] 用户回复了服务单"
+      subject: "[41 EXCHANGE] 用户回复了服务单"
       notification_content: 用户 %{email} 回复了服务单，详情请查看链接：
     user_notification:
-      subject: "[PEATIO] 您的服务单有了新的回复"
+      subject: "[41 EXCHANGE] 您的服务单有了新的回复"
       notification_content: '您的服务单有一条新的回复, 请在下方链接查看详情：'
   deposit_mailer:
     accepted:
@@ -1381,25 +1381,25 @@ zh-CN:
       content: 您的 %{currency} 已经到账.
   member_mailer:
     notify_signin:
-      subject: "[PEATIO] 您刚刚成功登录"
+      subject: "[41 EXCHANGE] 您刚刚成功登录"
       just_signed_in: 您刚刚成功登录了。
     google_auth_activated:
-      subject: "[PEATIO] 绑定谷歌两步验证"
+      subject: "[41 EXCHANGE] 绑定谷歌两步验证"
       google_auth_activated: 您已绑定谷歌两步验证。
     google_auth_deactivated:
-      subject: "[PEATIO] 重置谷歌两步验证"
+      subject: "[41 EXCHANGE] 重置谷歌两步验证"
       google_auth_deactivated: 您已重置谷歌两步验证。
     sms_auth_activated:
-      subject: "[PEATIO] 绑定短信两步验证"
+      subject: "[41 EXCHANGE] 绑定短信两步验证"
       sms_auth_activated: 您已绑定短信两步验证。
     sms_auth_deactivated:
-      subject: "[PEATIO] 重置短信两步验证"
+      subject: "[41 EXCHANGE] 重置短信两步验证"
       sms_auth_deactivated: 您已重置短信两步验证。
     reset_password_done:
-      subject: "[PEATIO] 密码修改成功"
+      subject: "[41 EXCHANGE] 密码修改成功"
       successful: 您已成功修改密码。请妥善保管~
     phone_number_verified:
-      subject: "[PEATIO] 您已成功绑定手机"
+      subject: "[41 EXCHANGE] 您已成功绑定手机"
       verified: '您已成功绑定手机，号码为：%{phone_number}。'
   system_mailer:
     daily_stats:
@@ -1412,19 +1412,19 @@ zh-CN:
       trades_change_total: 交易数变动总计
   ticket_mailer:
     admin_notification:
-      subject: "[PEATIO] 用户新建了服务单"
+      subject: "[41 EXCHANGE] 用户新建了服务单"
       admin_notification_content: 用户 %{email} 新建了服务单，详情请查看链接：
     author_notification:
-      subject: "[PEATIO] 您的服务单提交成功"
+      subject: "[41 EXCHANGE] 您的服务单提交成功"
       thanks_for_submit_ticket: 感谢您的反馈。我们会尽快处理，并第一时间告知您相关进展。
   token_mailer:
     activation:
-      subject: "[Peatio] 帐号激活"
-      click_to_verify: '感谢您注册 Peatio，赶快点击下面的链接验证您的E-mail吧：'
+      subject: "[41 Exchange] 帐号激活"
+      click_to_verify: '感谢您注册 41 Exchange，赶快点击下面的链接验证您的E-mail吧：'
       unable_to_click: 如果链接无法点击，请完整拷贝到浏览器地址栏里直接访问。
       link_expire: 链接30分钟之内有效。
     reset_password:
-      subject: "[Peatio] 请重置您的密码"
+      subject: "[41 Exchange] 请重置您的密码"
       hi: 您好
       follow_the_link: '请使用下面的连接，在30分钟之内尝试重置您的登录密码：'
   withdraw_mailer:
@@ -1455,9 +1455,9 @@ zh-CN:
   gon:
     ask: 卖出
     bid: 买入
-    brand: Peatio交易所
+    brand: 41 Exchange交易所
     notification:
-      title: Peatio交易所
+      title: 41 Exchange交易所
       enabled: 实时更新已开启。
       new_trade: "您的%{kind}委托 #%{id} 以 %{price} %{quote_unit} 价格成交，%{kind} %{volume} %{base_unit}。"
   back: 返回
@@ -1474,10 +1474,10 @@ zh-CN:
       short: "%m-%d %H:%M"
       default: "%Y-%m-%d %H:%M"
   sms:
-    verification_code: '验证码为：%{code}，30分钟内有效。（提示：工作人员不会索要，切勿泄露！）【PEATIO】'
-    password_changed: '%{email} 您好，您已成功修改账户密码，若非本人操作，您的账户可能存在被盗风险，请立即联系客服！【PEATIO】'
-    deposit_done: '%{email} 您好，您于%{time}进行了（%{currency}）充值操作，金额为%{amount}。最新余额为：%{balance}。（若非本人操作，请及时联系我们！）【PEATIO】'
-    withdraw_done: '%{email} 您好，您于%{time}进行了（%{currency}）提现操作，金额为%{amount}。最新余额为：%{balance}。（若非本人操作，请立即联系客服！）【PEATIO】'
+    verification_code: '验证码为：%{code}，30分钟内有效。（提示：工作人员不会索要，切勿泄露！）【41 EXCHANGE】'
+    password_changed: '%{email} 您好，您已成功修改账户密码，若非本人操作，您的账户可能存在被盗风险，请立即联系客服！【41 EXCHANGE】'
+    deposit_done: '%{email} 您好，您于%{time}进行了（%{currency}）充值操作，金额为%{amount}。最新余额为：%{balance}。（若非本人操作，请及时联系我们！）【41 EXCHANGE】'
+    withdraw_done: '%{email} 您好，您于%{time}进行了（%{currency}）提现操作，金额为%{amount}。最新余额为：%{balance}。（若非本人操作，请立即联系客服！）【41 EXCHANGE】'
   header:
     home: 首页
     dashboard: 控制面板
@@ -1662,9 +1662,9 @@ zh-CN:
     application:
       close: 关闭
     meta:
-      page_title: Peatio - The Opensource Cryptocurrency Exchange
-      page_description: Peatio - The Opensource Cryptocurrency Exchange
-      page_keywords: Peatio,Opensource,Exchange,Cryptocurrency
+      page_title: 41 Exchange - The Opensource Cryptocurrency Exchange
+      page_description: 41 Exchange - The Opensource Cryptocurrency Exchange
+      page_keywords: 41 Exchange,Opensource,Exchange,Cryptocurrency
   members:
     edit:
       name: 为了保障资金安全，请填写您的真实姓名等信息。
