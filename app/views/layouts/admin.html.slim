@@ -52,6 +52,10 @@ html lang="en"
             li class = check_active(Proof)
               = link_to t(".menus.items.operating.tickets"), admin_tickets_path
 
+          - if can? :manage, Ticket
+            li class = check_active(Proof)
+              = link_to t("Audits"), admin_audit_logs_path
+
           li.dropdown class = check_active('statistic')
             = link_to 'javascript:;', class: 'dropdown-toggle', 'data-toggle' => 'dropdown' do
               span = t('admin_header.statistics')

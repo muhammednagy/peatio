@@ -1,0 +1,29 @@
+.row
+  .col-xs-24
+    .panel.panel-info
+      .panel-heading Audit Logs
+      .panel-body
+        table.table.table-condensed.table-hover
+          thead
+            th Created at
+            th Email
+            th Currency text
+            th Type
+            th Amount
+            th Fee
+            th Status
+          tbody
+            - @audits.each do |audit|
+              tr
+                td = audit.created_at
+                - if audit.operator.present?
+                  td = link_to audit.operator.email, admin_member_path(audit.operator.id)
+                - else
+                  td -
+                td = audit.try(:auditable).currency
+                td = audit.auditable_type
+                td = audit.try(:auditable).amount
+                td = audit.try(:auditable).fee
+                td = audit.try(:auditable).aasm_state.capitalize
+
+        = paginate @audits, test: 'asdf'
