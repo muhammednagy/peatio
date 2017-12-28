@@ -1,4 +1,7 @@
 Peatio::Application.configure do
+  config.lograge.enabled = false
+  config.lograge.formatter = ->(data) { LogWebsite.create(data) } # data is a ruby hash
+
   # Settings specified here will take precedence over those in config/application.rb
 
   # In the development environment your application's code is reloaded on

@@ -102,3 +102,5 @@ group :test do
 end
 
 gem "rolify"
+gem "lograge"
+gem "logstash-event"

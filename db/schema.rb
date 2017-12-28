@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171226024835) do
+ActiveRecord::Schema.define(version: 20171228080006) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -194,6 +194,21 @@ ActiveRecord::Schema.define(version: 20171226024835) do
     t.boolean  "is_locked"
     t.datetime "locked_at"
     t.datetime "last_verify_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "log_websites", force: true do |t|
+    t.string   "method"
+    t.string   "path"
+    t.string   "format"
+    t.string   "controller"
+    t.string   "action"
+    t.string   "status"
+    t.string   "duration"
+    t.string   "view"
+    t.string   "db"
+    t.string   "location"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
