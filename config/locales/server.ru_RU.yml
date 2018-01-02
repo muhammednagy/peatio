@@ -133,7 +133,7 @@ ru_RU:
     satoshi:
       key: BTC
       code: BTC
-    renminbi:
+    ringgit:
       key: myr
       code: myr
   datagrid:

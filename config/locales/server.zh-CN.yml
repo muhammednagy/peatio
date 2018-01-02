@@ -302,7 +302,7 @@ zh-CN:
       code: BTSX
       name: 比特股
       format: '0,0.0000'
-    renminbi:
+    ringgit:
       key: myr
       code: myr
       name: 人民币

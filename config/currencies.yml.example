@@ -1,5 +1,5 @@
 - id: 1
-  key: renminbi
+  key: ringgit
   code: cny
   symbol: "¥"
   coin: false

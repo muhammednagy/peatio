@@ -309,7 +309,7 @@ cs:
       code: BTSX
       name: BitsharesX
       format: '0,0.0000'
-    renminbi:
+    ringgit:
       key: myr
       code: myr
       name: Čínský Yuan
