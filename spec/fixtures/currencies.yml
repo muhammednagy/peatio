@@ -1,5 +1,5 @@
 - id: 1
-  key: dollar
+  key: ringgit
   code: myr
   coin: false
   quick_withdraw_max: 10
