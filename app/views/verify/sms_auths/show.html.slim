@@ -1,6 +1,6 @@
 = simple_form_for @sms_auth, url: verify_sms_auth_path, remote: true, as: :sms_auth do |f|
 
-  = f.input :country, as: :country, priority: [ "China" ]
+  = f.input :country, as: :country, priority: [ "Indonesia" ]
   = f.input :phone_number do
     .input-group
       == f.text_field :phone_number, value: @phone_number, label: t('.phone_number'), class: 'string optional form-control', placeholder: t('.phone_number')
@@ -22,5 +22,3 @@
     = t('.description')
   p.text-warning
     = t('.warning')
-
-

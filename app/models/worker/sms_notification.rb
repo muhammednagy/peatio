@@ -6,7 +6,7 @@ module Worker
 
       raise "TWILIO_NUMBER not set" if ENV['TWILIO_NUMBER'].blank?
 
-      twilio_client.account.sms.messages.create(
+      twilio_client.messages.create(
         from: ENV["TWILIO_NUMBER"],
         to:   Phonelib.parse(payload[:phone]).international,
         body: payload[:message]
