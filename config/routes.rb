@@ -19,6 +19,8 @@ Peatio::Application.routes.draw do
   get '/signup' => 'identities#new', :as => :signup
   get '/signout' => 'sessions#destroy', :as => :signout
   get '/auth/failure' => 'sessions#failure', :as => :failure
+  get 'resend_otp_code' => 'welcome#resend_otp_code', :as => :resend_otp_code
+  match '/key_secret' => 'welcome#key_secret', :as => :key_secret, via: [:get, :post]
   match '/auth/:provider/callback' => 'sessions#create', via: [:get, :post]
 
   resource :member, :only => [:edit, :update]
