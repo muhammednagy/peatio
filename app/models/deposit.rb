@@ -1,4 +1,5 @@
 class Deposit < ActiveRecord::Base
+  establish_connection DB_TRANSACTION
   STATES = [:submitting, :cancelled, :submitted, :rejected, :accepted, :checked, :warning]
 
   extend Enumerize

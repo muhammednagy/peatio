@@ -1,4 +1,5 @@
 class PaymentAddress < ActiveRecord::Base
+  establish_connection DB_TRANSACTION
   include Currencible
   belongs_to :account
 

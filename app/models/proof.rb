@@ -1,4 +1,5 @@
 class Proof < ActiveRecord::Base
+  establish_connection DB_TRANSACTION
   include Currencible
 
   has_many :partial_trees

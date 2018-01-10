@@ -1,5 +1,6 @@
 class PartialTree < ActiveRecord::Base
-
+  establish_connection DB_TRANSACTION
+  
   belongs_to :account
   belongs_to :proof
 
