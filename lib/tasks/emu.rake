@@ -20,7 +20,7 @@ namespace :emu do
 
   def order(id, price, volume, type)
     Order.create \
-      ask: 'btc', bid: 'cny',
+      ask: 'btc', bid: 'myr',
       type: type, account: create_account(id),
       price: price, volume: volume, pin: '1234'
   end
@@ -33,7 +33,7 @@ namespace :emu do
 
   desc "emulate many order"
   task order_many_set: :environment do
-    (1..1000).each do 
+    (1..1000).each do
       bid_order(1, "5.0", "5.0")
       ask_order(2, "5.0", "5.0")
       bid_order(2, "5.0", "5.0")

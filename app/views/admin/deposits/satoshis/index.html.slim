@@ -1,3 +1,15 @@
+.row
+  .col-md-4
+    .form-group
+      label for="sel1"  Filter Transaction Date:
+      select#sel1.form-control onchange=("location = this.value;")
+        option
+        option value="#{admin_deposits_satoshis_path(date: "3-month-ago")}" 3 Month Ago
+        option value="#{admin_deposits_satoshis_path(date: "6-month-ago")}" 6 Month Ago
+        option value="#{admin_deposits_satoshis_path(date: "all")}" All Transaction
+  .col-md-4
+    label style="display: block;visibility: hidden" button
+    = link_to "Clear Filter", admin_deposits_satoshis_path, class: "btn btn-default"
 = table_for(@satoshis, class: 'table table-condensed table-hover') do |t|
   - t.column :txid do |x|
     a href='#{x.blockchain_url}' target='_blank'

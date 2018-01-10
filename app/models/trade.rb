@@ -1,4 +1,5 @@
 class Trade < ActiveRecord::Base
+  establish_connection DB_TRANSACTION
   extend ActiveHash::Associations::ActiveRecordExtensions
   ZERO = '0.0'.to_d
 

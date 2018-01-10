@@ -7,7 +7,7 @@
   type: WithdrawChannelSatoshi
 - id: 400
   key: bank
-  currency: cny
+  currency: myr
   fixed: 2
   fee_max: 0
   min: 100
@@ -25,4 +25,3 @@
   fixed: 8
   fee: 0.0005
   type: WithdrawChannelEthereum
-  

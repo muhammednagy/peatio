@@ -1,4 +1,5 @@
 class Withdraw < ActiveRecord::Base
+  establish_connection DB_TRANSACTION
   STATES = [:submitting, :submitted, :rejected, :accepted, :suspect, :processing,
             :done, :canceled, :almost_done, :failed]
   COMPLETED_STATES = [:done, :rejected, :canceled, :almost_done, :failed]

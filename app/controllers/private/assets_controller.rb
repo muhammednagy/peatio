@@ -3,13 +3,13 @@ module Private
     skip_before_action :auth_member!, only: [:index]
 
     def index
-      @cny_assets  = Currency.assets('cny')
+      @myr_assets  = Currency.assets('myr')
       @btc_proof   = Proof.current :btc
-      @cny_proof   = Proof.current :cny
+      @myr_proof   = Proof.current :myr
 
       if current_user
         @btc_account = current_user.accounts.with_currency(:btc).first
-        @cny_account = current_user.accounts.with_currency(:cny).first
+        @myr_account = current_user.accounts.with_currency(:myr).first
       end
     end
 

@@ -4,9 +4,18 @@ module Admin
       load_and_authorize_resource :class => '::Deposits::Bank'
 
       def index
-        start_at = DateTime.now.ago(60 * 60 * 24)
+        # start_at = DateTime.now.ago(60 * 60 * 24)
+        if params[:date] == "3-month-ago"
+          range_date = 3.month.ago.beginning_of_day..DateTime.now.end_of_day
+        elsif params[:date] == "6-month-ago"
+          range_date = 6.month.ago.beginning_of_day..DateTime.now.end_of_day
+        elsif params[:date] == "all"
+          range_date = @banks.pluck(:created_at)
+        else
+          range_date = 2.month.ago.beginning_of_day..DateTime.now.end_of_day
+        end
         @oneday_banks = @banks.includes(:member).
-          where('created_at > ?', start_at).
+          where(created_at: range_date).
           order('id DESC')
 
         @available_banks = @banks.includes(:member).
@@ -38,4 +47,3 @@ module Admin
     end
   end
 end
-

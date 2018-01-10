@@ -5,7 +5,7 @@ feature 'show account info', js: true do
   let!(:member) { create :member, :activated, email: identity.email  }
 
   let!(:bid_account) do
-    member.get_account('cny').tap { |a|
+    member.get_account('myr').tap { |a|
       a.plus_funds 1000
       a.save!
     }
@@ -21,13 +21,13 @@ feature 'show account info', js: true do
   let!(:bid_order) { create :order_bid, price: '21.3' }
   let!(:ask_name)  { 'BTC' }
 
-  let(:global) { Global[Market.find('btccny')] }
+  let(:global) { Global[Market.find('btcmyr')] }
 
   scenario 'user can place a buy order by filling in the order form' do
     login identity
     click_on I18n.t('header.market')
 
-    new_window=page.driver.browser.window_handles.last 
+    new_window=page.driver.browser.window_handles.last
     page.within_window new_window do
       expect do
         fill_in 'order_bid_price', :with => 22.2
@@ -45,7 +45,7 @@ feature 'show account info', js: true do
     login identity
     click_on I18n.t('header.market')
 
-    new_window=page.driver.browser.window_handles.last 
+    new_window=page.driver.browser.window_handles.last
     page.within_window new_window do
       expect do
         fill_in 'order_ask_price', :with => 22.2
@@ -67,7 +67,7 @@ feature 'show account info', js: true do
     login identity
     click_on I18n.t('header.market')
 
-    new_window=page.driver.browser.window_handles.last 
+    new_window=page.driver.browser.window_handles.last
     page.within_window new_window do
       page.find('.asks tr[data-order="0"]').trigger 'click'
       expect(find('#order_bid_price').value).to be_d ask_order.price
@@ -87,7 +87,7 @@ feature 'show account info', js: true do
     login identity
     click_on I18n.t('header.market')
 
-    new_window=page.driver.browser.window_handles.last 
+    new_window=page.driver.browser.window_handles.last
     page.within_window new_window do
       # account balance at place order panel
       expect(page.find('#bid_entry .current-balance').text).to be_d bid_account.balance

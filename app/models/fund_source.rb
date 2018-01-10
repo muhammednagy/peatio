@@ -1,4 +1,5 @@
 class FundSource < ActiveRecord::Base
+  establish_connection DB_TRANSACTION
   include Currencible
 
   attr_accessor :name

@@ -1,4 +1,5 @@
 class Member < ActiveRecord::Base
+  rolify
   acts_as_taggable
   acts_as_reader
 

@@ -1,4 +1,5 @@
 class PaymentTransaction < ActiveRecord::Base
+  establish_connection DB_TRANSACTION
   extend Enumerize
 
   include AASM
@@ -46,7 +47,7 @@ class PaymentTransaction < ActiveRecord::Base
 
   def deposit_accept
     if deposit.may_accept?
-      deposit.accept! 
+      deposit.accept!
     end
   end
 

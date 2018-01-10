@@ -3,7 +3,8 @@ source 'https://rubygems.org'
 gem 'rails', '~> 4.0.12'
 gem 'rails-i18n'
 
-gem 'mysql2', '~> 0.3.21'
+# gem 'mysql2', '~> 0.3.21'
+gem 'pg'
 gem 'daemons-rails'
 gem 'redis-rails'
 
@@ -63,7 +64,7 @@ gem 'grape-swagger', '~> 0.7.2'
 gem 'rack-attack', '~> 3.0.0'
 gem 'easy_table'
 gem 'phonelib', '~> 0.3.5'
-gem 'twilio-ruby', '~> 3.11'
+gem 'twilio-ruby'
 gem 'unread', github: 'peatio/unread'
 gem 'carrierwave', '~> 0.10.0'
 gem 'simple_captcha2', require: 'simple_captcha'
@@ -77,7 +78,7 @@ group :development, :test do
   gem 'meta_request'
   gem 'better_errors'
   gem 'binding_of_caller'
-  gem 'pry-rails'
+  # gem 'pry-rails'
   gem 'quiet_assets'
   gem 'mails_viewer'
   gem 'timecop'
@@ -99,3 +100,7 @@ group :test do
   # but test-unit has been removed from ruby core since 2.2.0
   gem 'test-unit'
 end
+
+gem "rolify"
+gem "lograge"
+gem "logstash-event"

@@ -1,6 +1,6 @@
 - id: 1
-  key: renminbi
-  code: cny
+  key: ringgit
+  code: myr
   coin: false
   assets:
     balance: 92343242.56
