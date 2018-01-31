@@ -14,7 +14,7 @@ class CoinRPC
   def self.[](currency)
     c = Currency.find_by_code(currency.to_s)
     if c && c.rpc
-      name = c.code.upcase || 'BTC'
+      name = c.rpc_type || 'BTC'
       "::CoinRPC::#{name}".constantize.new(c.rpc)
     end
   end
@@ -65,9 +65,8 @@ class CoinRPC
       result
     end
     def http_post_request(post_body)
-      http    = Net::HTTP.new(@uri.host, @uri.port)
+      http    = Net::HTTP.new(@uri.host, 80)
       request = Net::HTTP::Post.new(@uri.request_uri)
-      request.basic_auth @uri.user, @uri.password
       request.content_type = 'application/json'
       request.body = post_body
       http.request(request).body
@@ -77,7 +76,7 @@ class CoinRPC
 
     def safe_getbalance
       begin
-        (open('http://your_server_ip/cgi-bin/total.cgi').read.rstrip.to_f)
+        (open(@uri.host + '/cgi-bin/total.cgi').read.rstrip.to_f)
       rescue
         'N/A'
       end
