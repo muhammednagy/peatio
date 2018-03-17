@@ -83,4 +83,9 @@ class CoinRPC
       end
     end
   end
+
+  class TKC < self::BTC
+  end
+
+
 end

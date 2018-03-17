@@ -23,6 +23,10 @@ module Worker
       end
     end
 
+    def sum_by_address(channel, txid, txout, raw)
+
+    end
+
     def deposit_eth!(channel, txid, txout, raw)
       ActiveRecord::Base.transaction do
         unless PaymentAddress.where(currency: channel.currency_obj.id, address: raw[:to]).first
@@ -104,5 +108,6 @@ module Worker
     def get_raw_eth(txid)
       CoinRPC["eth"].eth_getTransactionByHash(txid)
     end
+
   end
 end

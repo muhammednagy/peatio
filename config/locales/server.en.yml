@@ -297,6 +297,7 @@ en:
       doge: DOGE
       pts: PTS
       ltc: LTC
+      tkc: TKC
   currency:
     satoshi:
       key: BTC
