@@ -1,7 +1,7 @@
 An open-source crypto currency exchange
 =====================================
 
-** THIS IS NO LONGER MAINTAINED **
+**THIS IS NO LONGER MAINTAINED**
 [![Code Climate](https://codeclimate.com/github/peatio/peatio.png)](https://codeclimate.com/github/peatio/peatio)
 [![Build Status](https://travis-ci.org/peatio/peatio.png?branch=master)](https://travis-ci.org/peatio/peatio)
 [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/InfraexDevPeatio/Lobby)
